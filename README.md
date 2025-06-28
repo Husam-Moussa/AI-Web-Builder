@@ -1,38 +1,46 @@
-# 🚀 AI Webpage Generator
+# AI Webpage Generator
 
-An intelligent web application that generates complete, responsive websites using Google's Gemini AI. Simply describe your website idea, and watch as AI creates a professional landing page with HTML, CSS, and JavaScript.
+A modern, responsive web application that generates complete HTML/CSS/JavaScript websites using Google's Gemini AI API. Transform your ideas into stunning, functional websites with just a description.
 
 ## ✨ Features
 
-- **AI-Powered Generation**: Uses Google Gemini API to create complete websites from text descriptions
-- **Live Preview**: See your generated website in real-time within the application
-- **Responsive Design**: All generated websites are mobile-friendly and responsive
-- **Modern UI**: Beautiful, professional designs with gradients, shadows, and modern elements
-- **Download Functionality**: Download the generated HTML file for immediate use
-- **Smart Suggestions**: Get AI-powered suggestions for improving your website
-- **User-Friendly Interface**: Clean, intuitive design with clear instructions
+- **AI-Powered Generation**: Uses Google Gemini 1.5 Flash model for intelligent website creation
+- **Live Preview**: Real-time preview of generated websites
+- **Responsive Design**: Works perfectly on desktop, tablet, and mobile devices
+- **Professional UI**: Clean, modern interface with smooth animations
+- **Download Functionality**: Export generated websites as HTML files
+- **Error Handling**: Comprehensive error handling and user feedback
 
-## 🛠️ Tech Stack
+## 🚀 Technologies Used
 
-- **Frontend**: React 19 with Vite
+- **Frontend**: React 18 with Vite
 - **Styling**: Tailwind CSS v4
-- **AI Integration**: Google Generative AI (Gemini)
-- **UI Components**: Custom React components with modern design
+- **AI Integration**: Google Gemini API
+- **Build Tool**: Vite
+- **Package Manager**: npm
 
-## 🚀 Getting Started
+## 📱 Responsive Design
 
-### Prerequisites
+The application is fully responsive and optimized for:
+- **Mobile**: Single column layout with optimized touch targets
+- **Tablet**: Balanced layout with medium preview area
+- **Desktop**: Two-column layout with maximum preview space
+- **Large Screens**: Enhanced spacing and larger preview areas
 
-- Node.js (v16 or higher)
-- npm or yarn
-- Google Gemini API key
+## 🎨 UI Features
 
-### Installation
+- **Professional Loader**: Animated circular pixels loader on app initialization
+- **Modern Design**: Clean white background with black accents
+- **Smooth Animations**: CSS transitions and keyframe animations
+- **Glass Morphism**: Subtle shadows and border effects
+- **Interactive Elements**: Hover effects and loading states
+
+## 🛠️ Installation
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd webgenerator
+   git clone https://github.com/Husam-Moussa/AI-Web-Builder.git
+   cd AI-Web-Builder
    ```
 
 2. **Install dependencies**
@@ -40,147 +48,97 @@ An intelligent web application that generates complete, responsive websites usin
    npm install
    ```
 
-3. **Get your Gemini API key**
-   - Visit [Google AI Studio](https://makersuite.google.com/app/apikey)
-   - Create a new API key
-   - Copy the key for use in the application
-
-4. **Start the development server**
+3. **Start the development server**
    ```bash
    npm run dev
    ```
 
-5. **Open your browser**
-   - Navigate to `http://localhost:5173`
-   - Enter your Gemini API key when prompted
+4. **Open your browser**
+   Navigate to `http://localhost:5174` (or the port shown in your terminal)
 
-## 📖 How to Use
+## 🔧 Configuration
 
-### 1. API Key Setup
-- When you first open the application, you'll be prompted to enter your Gemini API key
-- Click the link to get your API key from Google AI Studio
-- Enter your key and click "Save"
+### API Key Setup
+The application uses a hardcoded Google Gemini API key. For production use, consider:
+- Moving the API key to environment variables
+- Implementing proper API key management
+- Adding rate limiting and usage monitoring
 
-### 2. Describe Your Website
-- In the text area, describe the website you want to create
-- Be specific about:
-  - Type of business/service
-  - Key features you want
-  - Target audience
-  - Design preferences
+### Customization
+- Modify the prompt in `src/App.jsx` to change the AI generation behavior
+- Update styling in `src/App.css` for custom themes
+- Adjust responsive breakpoints in `tailwind.config.js`
 
-### 3. Generate Your Website
-- Click the "Generate Website" button
-- Wait for the AI to create your website (usually takes 10-30 seconds)
-- View the live preview on the right side
-
-### 4. Download and Use
-- Click "Download HTML File" to save your website
-- Open the downloaded file in any web browser
-- The website is ready to use!
-
-## 💡 Example Descriptions
-
-Here are some example descriptions you can try:
+## 📁 Project Structure
 
 ```
-"I want a website for my photography business with a portfolio gallery, contact form, and booking system for photo sessions."
+AI-Web-Builder/
+├── public/                 # Static assets
+├── src/
+│   ├── components/         # React components
+│   ├── App.jsx            # Main application component
+│   ├── App.css            # Custom styles
+│   ├── main.jsx           # Application entry point
+│   └── index.css          # Global styles
+├── package.json           # Dependencies and scripts
+├── tailwind.config.js     # Tailwind CSS configuration
+├── vite.config.js         # Vite configuration
+└── README.md              # Project documentation
 ```
 
-```
-"Create a restaurant website with menu, online ordering, location map, and customer reviews section."
-```
+## 🎯 Usage
 
-```
-"I need a personal blog website with dark theme, article categories, and social media links."
-```
+1. **Describe Your Website**: Enter a detailed description of the website you want to create
+2. **Generate**: Click the "Generate Website" button to create your site
+3. **Preview**: View the generated website in the live preview area
+4. **Download**: Save the generated HTML file to your computer
 
-```
-"Design a fitness trainer website with workout plans, client testimonials, and online booking calendar."
-```
+## 🔒 Security Considerations
 
-## 🔧 Customization
+- The current implementation includes a hardcoded API key (for demonstration purposes)
+- In production, implement proper API key management
+- Consider adding rate limiting and user authentication
+- Validate and sanitize user inputs
 
-### Modifying the AI Prompts
-You can customize the AI prompts in `src/App.jsx`:
+## 🚀 Deployment
 
-- **Main generation prompt**: Lines 47-58
-- **Suggestions prompt**: Lines 67-75
+### Vercel (Recommended)
+1. Connect your GitHub repository to Vercel
+2. Vercel will automatically detect the Vite configuration
+3. Deploy with a single click
 
-### Styling
-- Main styles are in `src/App.css`
-- Uses Tailwind CSS for utility classes
-- Custom CSS for specific components
+### Netlify
+1. Build the project: `npm run build`
+2. Upload the `dist` folder to Netlify
+3. Configure build settings if needed
 
-## 🎨 Generated Website Features
-
-Each generated website includes:
-
-- **Responsive Layout**: Works on desktop, tablet, and mobile
-- **Modern Design**: Clean, professional appearance
-- **Interactive Elements**: Hover effects, animations, and user interactions
-- **SEO-Friendly**: Proper HTML structure and meta tags
-- **Fast Loading**: Optimized code for quick page loads
-- **Cross-Browser Compatible**: Works in all modern browsers
-
-## 🔒 Security & Privacy
-
-- API keys are stored locally in the browser (not sent to any server)
-- No user data is collected or stored
-- Generated websites are created locally in your browser
-- All processing happens through Google's secure Gemini API
-
-## 🚨 Troubleshooting
-
-### Common Issues
-
-1. **"Failed to generate website" error**
-   - Check your API key is correct
-   - Ensure you have sufficient Gemini API credits
-   - Try refreshing the page
-
-2. **Preview not showing**
-   - Check browser console for errors
-   - Ensure JavaScript is enabled
-   - Try a different browser
-
-3. **Download not working**
-   - Check browser download settings
-   - Ensure pop-up blockers are disabled
-   - Try right-clicking the download button
-
-### API Limits
-- Gemini API has rate limits and usage quotas
-- Free tier includes 15 requests per minute
-- Consider upgrading for higher limits
+### Other Platforms
+The application can be deployed to any static hosting service that supports React applications.
 
 ## 🤝 Contributing
 
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+2. Create a feature branch: `git checkout -b feature-name`
+3. Commit your changes: `git commit -m 'Add feature'`
+4. Push to the branch: `git push origin feature-name`
+5. Submit a pull request
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is open source and available under the [MIT License](LICENSE).
+
+## 👨‍💻 Author
+
+**Husam Moussa**
+- GitHub: [@Husam-Moussa](https://github.com/Husam-Moussa)
 
 ## 🙏 Acknowledgments
 
-- Google Gemini AI for providing the AI capabilities
-- React team for the amazing framework
-- Tailwind CSS for the utility-first styling
-- Vite for the fast build tool
-
-## 📞 Support
-
-If you encounter any issues or have questions:
-
-1. Check the troubleshooting section above
-2. Search existing GitHub issues
-3. Create a new issue with detailed information
+- Google Gemini API for AI-powered website generation
+- React and Vite teams for the excellent development tools
+- Tailwind CSS for the utility-first CSS framework
+- The open-source community for inspiration and support
 
 ---
 
-**Happy website generating! 🎉**
+**Note**: This project is for educational and demonstration purposes. The hardcoded API key should be replaced with proper environment variable management for production use.
