@@ -21,7 +21,7 @@ function App() {
 
   // Initialize Gemini API
   const initializeGemini = () => {
-    const API_KEY = 'AIzaSyCTndjbiLs-hVrJRIK7hI0_aheAS2VDXXA'
+    const API_KEY = 'AIzaSyB_LBh6rTqMJuOu_GJVR17085kN-7xPOIU'
     return API_KEY
   }
 
